@@ -1,0 +1,87 @@
+%%%%%%%%%%%%%%%%%%%%%%SHOM'S ACADEMIC ARTICLE TEMPLATE%%%%%%%%%%%%%%%%%%%%
+
+%!TEX TS-program = xelatex
+%\documentclass[12pt,letterpaper]{scrartcl}
+\documentclass[12pt,letterpaper]{article}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{dcolumn}
+\usepackage{booktabs}
+\usepackage{natbib}
+\usepackage{rotating}
+\usepackage{caption}
+\usepackage{amssymb, amsmath}
+\usepackage{footbib}
+\usepackage[margin=1.00in]{geometry}
+\usepackage{adjustbox}
+\newcommand{\introquote}[3]{\begin{quotation} \textit{#1} \end{quotation} \begin{flushright} - #2, \textit{#3}\end{flushright} }
+%\renewcommand\thesection{} % < - uncomment out to remove section numbering
+%\renewcommand\thesubsection{} 
+
+
+\usepackage[MnSymbol]{mathspec} % includes fontspec
+\usepackage[math-style=TeX]{unicode-math}
+
+\defaultfontfeatures{Scale=MatchLowercase,Numbers={Lining,Proportional}}
+\setmainfont[Renderer=Basic,Ligatures=TeX]{Garamond} 
+\newfontfamily\titlefont[]{Helvetica Neue Thin}
+\setsansfont{Helvetica Neue Thin}
+%\setmonofont[Scale=0.95]{Inconsolata}
+%\setmathfont{xits-math.otf}
+\setmathsfont[Set=Greek,Uppercase=Italic,Lowercase=Italic]{Helvetica Neue Thin}
+	
+\usepackage{microtype}
+
+%author info
+\def\myaffiliation{} % <- insert your affiliation
+\def\myauthor{} % <- insert your author names
+\def\myemail{\small{\texttt{\href{}{}}}} % <- insert your emails
+\def\mytitle{} % < - insert article title
+\def\mykeywords{} % < - insert keywords
+
+%hyperlinks
+\usepackage[usenames,dvipsnames]{xcolor}                     
+\usepackage[xetex, 
+	colorlinks=true,
+	urlcolor=Mahogany, % external links
+        citecolor=RoyalBlue, % citations
+        filecolor=BlueViolet, % local files
+	plainpages=false,
+  	pdfpagelabels,
+  	bookmarksnumbered,
+  	pdftitle={\mytitle},
+  	pdfauthor={\myauthor},
+  	pdfkeywords={\mykeywords}
+  	]{hyperref}  
+	
+%track changes
+\usepackage[]{changes}%insert final into option to generate finalized version
+\definechangesauthor[name={}, color=orange]{} % \definechangesauthor[name={YOUR NAME}, color=orange]{YOUR INITIALS}
+\setremarkmarkup{(#2)}
+
+%This is \added[remark={we need this}]{new} text.
+%This is \added[remark={has to be in it}]{new} text.
+%This is \deleted[remark=obsolete]{unnecessary}text.
+%This is \replaced{nice}{bad} text.
+		
+\begin{document}
+
+\title{\titlefont \bigskip \bigskip {{\mytitle}}}
+
+\author{\titlefont \myauthor \\
+  \emph{\titlefont \myaffiliation} \\ \myemail}% \thanks{ }
+
+
+\date{{\titlefont \today}} 
+
+\maketitle  
+
+\begin{abstract}
+
+\end{abstract}
+
+\bibliographystyle{} % <-insert bib style file
+\bibliography{} % <-fill in bib name
+
+\end{document}
